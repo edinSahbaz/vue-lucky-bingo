@@ -11,8 +11,8 @@ export default {};
   background: #ef424c;
   border-radius: 50%;
   border: 2px solid #f8f0ee;
-  width: 3em;
-  height: 3em;
+  width: 3.4em;
+  height: 3.4em;
   margin: 1em;
 }
 </style>

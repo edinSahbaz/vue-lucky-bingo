@@ -32,7 +32,7 @@ button {
   height: 2em;
 }
 
-button:focus {
+button:hover {
   cursor: pointer;
 }
 
