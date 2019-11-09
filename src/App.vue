@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Landing />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Landing from "./components/Landing.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Landing
   }
 };
 </script>
@@ -19,12 +18,15 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100vh;
+  background-color: #757575;
 }
 </style>
