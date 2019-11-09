@@ -62,10 +62,10 @@ export default {
 }
 
 .starterTimer {
-  font-size: 50px;
+  font-size: 3em;
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  padding-left: 0.5em;
 }
 
 .middleBalls {

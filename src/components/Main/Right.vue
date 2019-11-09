@@ -25,6 +25,7 @@ export default {
 <style scoped>
 .right {
   grid-area: right;
+  border-left: 4px dotted #f8f0ee;
 }
 
 .manual {

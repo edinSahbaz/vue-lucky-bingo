@@ -27,6 +27,7 @@ export default {
   grid-area: middleBottom;
   display: flex;
   align-items: center;
+  border-top: 4px dotted #f8f0ee;
   justify-content: center;
 }
 </style>
