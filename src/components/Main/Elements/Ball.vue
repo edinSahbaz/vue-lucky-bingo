@@ -8,11 +8,11 @@ export default {};
 
 <style scoped>
 #ball {
-  background: #ef424c;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
   border-radius: 50%;
   border: 2px solid #f8f0ee;
-  width: 3.4em;
-  height: 3.4em;
+  width: 4em;
+  height: 4em;
   margin: 1em;
 }
 </style>

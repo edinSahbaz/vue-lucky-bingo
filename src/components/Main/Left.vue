@@ -36,7 +36,7 @@ button {
   outline: none;
   border: 0;
   color: #f8f0ee;
-  font-size: 1.6em;
+  font-size: 2em;
   border-radius: 0.8em;
   width: 8em;
   height: 2em;
@@ -47,7 +47,7 @@ button:hover {
 }
 
 p {
-  margin-top: 1em;
+  margin-top: 1.2em;
   font-size: 1.2em;
 }
 </style>

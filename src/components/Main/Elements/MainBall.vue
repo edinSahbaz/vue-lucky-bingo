@@ -3,9 +3,7 @@
 </template>
 
 <script>
-export default {
-  name: "BingoBall"
-};
+export default {};
 </script>
 
 <style scoped>
@@ -19,7 +17,7 @@ export default {
   );
   border: 2px solid #f8f0ee;
   border-radius: 50%;
-  width: 5em;
-  height: 5em;
+  width: 20em;
+  height: 20em;
 }
 </style>
