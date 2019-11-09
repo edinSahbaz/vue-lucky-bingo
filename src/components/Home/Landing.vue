@@ -1,8 +1,8 @@
 <template>
   <div id="container">
-    <img src="./../assets/logo.png" alt />
+    <img src="../../assets/logo.png" alt />
     <h1>Want to try out your luck?</h1>
-    <button>PLAY</button>
+    <router-link to="/main"><button>PLAY</button></router-link>
   </div>
 </template>
 
