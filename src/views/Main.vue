@@ -1,7 +1,8 @@
 <template>
     <div class="main">
         <Left />
-        <middleUpper />
+        <Ending/>
+<!--        <middleUpper />-->
         <middleBottom />
         <Right />
     </div>
@@ -9,17 +10,19 @@
 
 <script>
     import Left from "../components/Main/Left";
-    import middleUpper from "../components/Main/middleUpper";
+    // import middleUpper from "../components/Main/middleUpper";
     import middleBottom from "../components/Main/middleBottom";
     import Right from "../components/Main/Right";
+    import Ending from "../components/Main/Ending";
 
     export default {
         name: "Main",
         components: {
             Left,
-            middleUpper,
+            // middleUpper,
             middleBottom,
-            Right
+            Right,
+            Ending
         }
     }
 </script>
