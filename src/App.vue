@@ -18,6 +18,10 @@
   padding: 0;
 }
 
+body{
+  overflow: hidden;
+}
+
 #app {
   font-family: "Raleway", sans-serif;
   width: 100%;
