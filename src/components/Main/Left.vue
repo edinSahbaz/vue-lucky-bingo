@@ -1,13 +1,23 @@
 <template>
   <div class="left">
-    <button>Get Ticket</button>
-    <p>Tickets withdrew:4</p>
+    <button v-on:click="increment">GET Ticket</button>
+    <p>Tickets withdrew:{{count}}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Left"
+  name: "Left",
+  data() {
+    return {
+      count: 0
+    };
+  },
+  methods: {
+    increment: function increment() {
+      return ++this.count;
+    }
+  }
 };
 </script>
 
