@@ -25,20 +25,19 @@ export default {
 <style scoped>
 .right {
   grid-area: right;
-  border: 1px solid chartreuse;
 }
 
-  .manual {
-    margin: 10% 5%;
-    line-height: 1.6;
-  }
+.manual {
+  margin: 10% 5%;
+  line-height: 1.6;
+}
 
-  .manual h1 {
-    margin-bottom: 5px;
-  }
+.manual h1 {
+  margin-bottom: 5px;
+}
 
-  .manual span {
-    display: block;
-    font-size: 16px;
-  }
+.manual span {
+  display: block;
+  font-size: 16px;
+}
 </style>

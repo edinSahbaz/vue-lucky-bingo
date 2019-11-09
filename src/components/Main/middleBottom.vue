@@ -25,7 +25,6 @@ export default {
 <style scoped>
 .middleBottom {
   grid-area: middleBottom;
-  border: 1px solid deepskyblue;
   display: flex;
   align-items: center;
   justify-content: center;

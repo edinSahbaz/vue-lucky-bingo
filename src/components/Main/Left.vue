@@ -28,7 +28,6 @@ export default {
   align-items: center;
   justify-content: center;
   grid-area: left;
-  border: 1px solid red;
 }
 
 button {
