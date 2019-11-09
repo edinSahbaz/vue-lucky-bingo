@@ -1,18 +1,43 @@
 <template>
-    <div class="left">
-        left
-    </div>
+  <div class="left">
+    <button>Get Ticket</button>
+    <p>Tickets withdrew:4</p>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "Left"
-    }
+export default {
+  name: "Left"
+};
 </script>
 
 <style scoped>
-    .left {
-        grid-area: left;
-        border: 1px solid red;
-    }
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: left;
+  border: 1px solid red;
+}
+
+button {
+  background-color: #ef424c;
+  outline: none;
+  border: 0;
+  color: #f8f0ee;
+  font-size: 1.6em;
+  border-radius: 0.8em;
+  width: 8em;
+  height: 2em;
+}
+
+button:focus {
+  cursor: pointer;
+}
+
+p {
+  margin-top: 1em;
+  font-size: 1.2em;
+}
 </style>

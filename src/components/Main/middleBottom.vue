@@ -1,18 +1,23 @@
 <template>
-    <div class="middleBottom">
-        middleBottom
-    </div>
+  <div class="middleBottom">
+    middleBottom
+    <Ball />
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "middleBottom"
-    }
+import Ball from "./Elements/Ball.vue";
+export default {
+  name: "middleBottom",
+  components: {
+    Ball
+  }
+};
 </script>
 
 <style scoped>
-    .middleBottom {
-        grid-area: middleBottom;
-        border: 1px solid deepskyblue;
-    }
+.middleBottom {
+  grid-area: middleBottom;
+  border: 1px solid deepskyblue;
+}
 </style>

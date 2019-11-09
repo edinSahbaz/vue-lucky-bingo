@@ -2,7 +2,7 @@
   <div id="app">
     <Landing />
     <Particles />
-    <Main/>
+    <Main />
   </div>
 </template>
 

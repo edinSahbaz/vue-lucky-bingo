@@ -15,3 +15,5 @@ After downloading the repo, navigate to it's directory with CLI.
 ## <img src="https://cdn1.iconfinder.com/data/icons/material-core/22/visibility-32.png" width="32"/> Description:
 
 Will be added...
+
+# Try it out: https://gambling-game.netlify.com/
