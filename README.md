@@ -16,4 +16,4 @@ After downloading the repo, navigate to it's directory with CLI.
 
 Will be added...
 
-# Try it out: https://gambling-game.netlify.com/
+#### Try it out: https://gambling-game.netlify.com/
