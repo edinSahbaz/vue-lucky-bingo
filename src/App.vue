@@ -1,33 +1,19 @@
 <template>
   <div id="app">
     <Landing />
-    <vue-particles
-      color="#dedede"
-      :particleOpacity="1"
-      :particlesNumber="80"
-      shapeType="circle"
-      :particleSize="3"
-      linesColor="#EF424C"
-      :linesWidth="1"
-      :lineLinked="true"
-      :lineOpacity="0.4"
-      :linesDistance="150"
-      :moveSpeed="4"
-      :hoverEffect="true"
-      hoverMode="repulse"
-      :clickEffect="true"
-      clickMode="push"
-    ></vue-particles>
+    <Particles />
   </div>
 </template>
 
 <script>
 import Landing from "./components/Landing.vue";
+import Particles from "./components/Particles.vue";
 
 export default {
   name: "app",
   components: {
-    Landing
+    Landing,
+    Particles
   }
 };
 </script>
