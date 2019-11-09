@@ -1,7 +1,7 @@
 <template>
   <div class="left">
     <button v-on:click="increment">GET Ticket</button>
-    <p>Tickets withdrew:{{count}}</p>
+    <p>Tickets withdrew: {{count}}</p>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
     };
   },
   methods: {
-    increment: function increment() {
+    increment() {
       return ++this.count;
     }
   }
