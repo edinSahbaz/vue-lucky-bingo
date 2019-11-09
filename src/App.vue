@@ -2,16 +2,19 @@
   <div id="app">
     <Landing />
     <Particles />
+    <Main/>
   </div>
 </template>
 
 <script>
+import Main from "./components/Main";
 import Landing from "./components/Landing.vue";
 import Particles from "./components/Particles.vue";
 
 export default {
   name: "app",
   components: {
+    Main,
     Landing,
     Particles
   }
@@ -29,7 +32,7 @@ export default {
 #app {
   font-family: "Raleway", sans-serif;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #2d3440;
 }
 </style>
