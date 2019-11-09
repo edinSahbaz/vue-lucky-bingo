@@ -12,30 +12,35 @@ export default {};
 
 <style lang="css" scoped>
 #container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 img {
-  width: 15em;
-  height: 15em;
+  margin-top: 8%;
+  width: 18em;
+  height: 18em;
 }
 
 h1 {
+  margin: 1.2em 0;
   font-size: 1.6em;
-  color: #f3fe7e;
+  color: #f8f0ee;
 }
 
 button {
-  margin-top: 1em;
-  background-color: #ddf796;
+  background-color: rgb(40, 191, 219, 0.5);
   outline: none;
   border: 0;
-  color: #757575;
+  color: #f8f0ee;
   font-size: 2em;
-  border-radius: 2em;
+  border-radius: 0.8em;
   width: 8em;
   height: 2em;
 }

@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.3.2",
-    "vue": "^2.6.10"
+    "particles.js": "^2.0.0",
+    "vue": "^2.6.10",
+    "vue-particles": "^1.0.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",

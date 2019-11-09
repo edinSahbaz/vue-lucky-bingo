@@ -1,6 +1,23 @@
 <template>
   <div id="app">
     <Landing />
+    <vue-particles
+      color="#dedede"
+      :particleOpacity="1"
+      :particlesNumber="80"
+      shapeType="circle"
+      :particleSize="3"
+      linesColor="#EF424C"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="4"
+      :hoverEffect="true"
+      hoverMode="repulse"
+      :clickEffect="true"
+      clickMode="push"
+    ></vue-particles>
   </div>
 </template>
 
@@ -16,7 +33,7 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
 * {
   margin: 0;
@@ -24,9 +41,9 @@ export default {
 }
 
 #app {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   width: 100%;
-  height: 100vh;
-  background-color: #757575;
+  height: 100%;
+  background-color: #2d3440;
 }
 </style>
