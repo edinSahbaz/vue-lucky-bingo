@@ -1,6 +1,8 @@
 <template>
   <div class="left">
-    <button v-on:click="increment">GET Ticket</button>
+    <router-link to="/ticket" target="_blank">
+      <button v-on:click="increment">GET Ticket</button>
+    </router-link>
     <p>Tickets withdrew: {{count}}</p>
   </div>
 </template>
