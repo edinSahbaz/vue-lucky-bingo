@@ -6,14 +6,14 @@
       <br />These are the numbers that have been generated for you:
     </p>
     <div class="balls">
-      <Ball />
-      <Ball />
-      <Ball />
-      <Ball />
-      <Ball />
-      <Ball />
-      <Ball />
-      <Ball />
+      <Ball num="12" />
+      <Ball num="73" />
+      <Ball num="25" />
+      <Ball num="71" />
+      <Ball num="24" />
+      <Ball num="55" />
+      <Ball num="18" />
+      <Ball num="94" />
     </div>
   </div>
 </template>

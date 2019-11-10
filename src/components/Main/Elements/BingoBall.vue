@@ -1,10 +1,17 @@
 <template>
-  <div id="bingoBall"></div>
+  <div id="bingoBall">
+    <p>{{num}}</p>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "BingoBall"
+  name: "BingoBall",
+  props: {
+    num: {
+      type: Number
+    }
+  }
 };
 </script>
 
@@ -22,5 +29,11 @@ export default {
   width: 5em;
   height: 5em;
   margin: 5px;
+}
+
+p {
+  margin-top: 0.1em;
+  font-size: 3em;
+  text-align: center;
 }
 </style>

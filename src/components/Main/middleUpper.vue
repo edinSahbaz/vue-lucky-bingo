@@ -1,21 +1,21 @@
 <template>
   <div class="middleUpper">
     <div class="starterTimer">
-      <span class="animated infinite pulse">{{display}}</span>
+      <span class="animated infinite fadeIn">{{display}}</span>
     </div>
     <div class="balls">
-      <MainBall />
+      <MainBall num="30" />
       <div class="strow">
-        <BingoBall />
-        <BingoBall />
-        <BingoBall />
-        <BingoBall />
+        <BingoBall num="24" />
+        <BingoBall num="35" />
+        <BingoBall num="68" />
+        <BingoBall num="26" />
       </div>
       <div class="ndrow">
-        <BingoBall />
-        <BingoBall />
-        <BingoBall />
-        <BingoBall />
+        <BingoBall num="72" />
+        <BingoBall num="17" />
+        <BingoBall num="41" />
+        <BingoBall num="30" />
       </div>
     </div>
   </div>
@@ -33,17 +33,23 @@ export default {
   },
   data() {
     return {
-      countDown: 60,
+      num: 0,
+      countDown: 3,
       display: "01:00"
     };
   },
   methods: {
+    removeDisplay: function() {
+      this.display = "";
+    },
     timer: function() {
       if (this.countDown >= 0) {
         setTimeout(() => {
           this.countDown -= 1;
           if (this.countDown === 0) {
             this.display = "The Game has started!";
+            setTimeout(this.removeDisplay, 3000);
+            this.generateComb;
           } else {
             this.timer();
             if (this.countDown > 9) {
@@ -57,8 +63,7 @@ export default {
     }
   },
   mounted() {
-    setTimeout(this.timer(), 2500); //!:SKONTATI STO TIMEOUT NE RADI!
-    //!:Poziva funkciju odmah na mont komponente umjesto da saceka 2.5 s
+    setTimeout(this.timer, 2500);
   }
 };
 </script>

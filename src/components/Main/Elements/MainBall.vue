@@ -1,9 +1,17 @@
 <template>
-  <div id="bingoBall"></div>
+  <div id="bingoBall">
+    <p>{{num}}</p>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    num: {
+      type: Number
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -19,5 +27,11 @@ export default {};
   border-radius: 50%;
   width: 20em;
   height: 20em;
+}
+
+p {
+  margin-top: 0.2em;
+  font-size: 12em;
+  text-align: center;
 }
 </style>
