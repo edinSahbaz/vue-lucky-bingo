@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       num: 0,
-      countDown: 3,
+      countDown: 60,
       display: "01:00"
     };
   },
