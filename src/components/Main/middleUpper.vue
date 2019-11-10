@@ -1,7 +1,7 @@
 <template>
   <div class="middleUpper">
     <div class="starterTimer">
-      <span>60:00</span>
+      <span class="animated infinite pulse">{{display}}</span>
     </div>
     <div class="balls">
       <MainBall />
@@ -30,11 +30,41 @@ export default {
   components: {
     BingoBall,
     MainBall
+  },
+  data() {
+    return {
+      countDown: 60,
+      display: "01:00"
+    };
+  },
+  methods: {
+    timer: function() {
+      if (this.countDown >= 0) {
+        setTimeout(() => {
+          this.countDown -= 1;
+          if (this.countDown === 0) {
+            this.display = "The Game has started!";
+          } else {
+            this.timer();
+            if (this.countDown > 9) {
+              this.display = "00:" + this.countDown;
+            } else {
+              this.display = "00:" + "0" + this.countDown;
+            }
+          }
+        }, 1000);
+      }
+    }
+  },
+  mounted() {
+    setTimeout(this.timer(), 2500); //!:SKONTATI STO TIMEOUT NE RADI!
+    //!:Poziva funkciju odmah na mont komponente umjesto da saceka 2.5 s
   }
 };
 </script>
 
 <style scoped>
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css";
 .middleUpper {
   display: grid;
   grid-area: middleUpper;
@@ -43,9 +73,8 @@ export default {
 
 .starterTimer {
   font-size: 3em;
-  display: flex;
-  align-items: center;
   padding-left: 0.5em;
+  padding-top: 0.2em;
 }
 
 .balls {

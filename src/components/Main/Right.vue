@@ -4,7 +4,7 @@
       <h1>Manual</h1>
       <span>Grab your tickets before the timer hits 00:00.</span>
       <span>On your ticket, you will see</span>
-      <span>combination of 10 numbers and ID of your ticket.</span>
+      <span>combination of 8 numbers and ID of your ticket.</span>
       <span>You can't make new tickets when the timer hits 00:00.</span>
       <span>New timer arrives and every 10 seconds new number will be generated.</span>
       <span>Our bingo will create a combination of 8 different numbers.</span>
