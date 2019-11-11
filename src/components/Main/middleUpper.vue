@@ -46,7 +46,9 @@ export default {
     ...mapActions(["timer", "generateCombination"])
   },
   created() {
-    this.timer();
+    setTimeout(() => {
+      this.timer();
+    }, 2000);
     setTimeout(() => {
       this.generateCombination();
     }, 55000);
