@@ -1,17 +1,16 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import timerMinute from "./modules/timerMinute";
+import Vue from "vue";
+import Vuex from "vuex";
+import timerModule from "./modules/timerModule";
+import combinationModule from "./modules/combinationModule";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+  state: {},
+  mutations: {},
+  actions: {},
   modules: {
-    timerMinute
+    timerModule,
+    combinationModule
   }
-})
+});
