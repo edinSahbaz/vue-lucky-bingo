@@ -51,7 +51,7 @@ export default {
     }, 2000);
     setTimeout(() => {
       this.generateCombination();
-    }, 55000);
+    }, 57000);
 
     //poziva timer pri "montiranju" modula i posto treba 6s da se prikaze novi br,stavio sam da
     //nakon sto krene timer krene i timeout za poziv funkcije koja ispisuje onaj lastNum iz modula
