@@ -1,3 +1,10 @@
+//Ovaj modul sam nap isklj za kombinacije.
+
+//Imaju 2 "var" kombinacija(8 random br) i lastNum koji uzima novu vrijednost
+//svakih 6s iz kombinacije.
+
+//Nez et sta vise da ti napisem haha,kod je prilicno samoobjasnjiv :D
+
 const state = {
   lastNum: "",
   combination: []
@@ -30,7 +37,7 @@ const actions = {
       } else {
         clearInterval();
       }
-    }, 10000);
+    }, 6000);
   }
 };
 

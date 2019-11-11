@@ -22,6 +22,12 @@
 </template>
 
 <script>
+//Ti sad trebas napravit da u svaki ovaj BingoBall ubaci novi broj koji se prikaze u MainBall
+//i da ide redom...puni od 1. do 8. loptice
+
+//mozda moze se odrait sa v-for pa da ih kreira kako se izvlaci kombinacija,al eto...na tebi je kako
+//ces uradit.Znaci sad kad ovamo izvuce 5. broj npr treba prosljedit u 5. lopticu.
+
 import BingoBall from "./Elements/BingoBall";
 import MainBall from "./Elements/MainBall";
 
@@ -43,7 +49,11 @@ export default {
     this.timer();
     setTimeout(() => {
       this.generateCombination();
-    }, 56000);
+    }, 55000);
+
+    //poziva timer pri "montiranju" modula i posto treba 6s da se prikaze novi br,stavio sam da
+    //nakon sto krene timer krene i timeout za poziv funkcije koja ispisuje onaj lastNum iz modula
+    //jer bi bilo glupo da krene igra i cekas prvi broj 6s,ovako ga cekas samo 1s a ostalo ide isto :)
   }
 };
 </script>

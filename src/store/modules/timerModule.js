@@ -1,5 +1,8 @@
+//Ovdje sam samo one fukcije uzeo i onda sam skonto da prekomplikovane bzvz tako da sam
+//sad skratio na ovo i ovaj modul upravlja timerom
+
 const state = {
-  time: 60,
+  time: 59,
   display: "01:00"
 };
 
@@ -9,11 +12,9 @@ const getters = {
 
 const actions = {
   gameStartDisplay() {
-    state.display = "The Game has started!";
-
-    setTimeout(() => {
-      state.display = null;
-    }, 3000);
+    state.display = null;
+    //Ovdje treba dodat neki prikaz kad krene igra nesto eto da blica il sjz haha
+    //Skontat cemo to kasnije,jer je nebitna stvar...
   },
   setTimeDisplay() {
     if (state.time >= 10) {
