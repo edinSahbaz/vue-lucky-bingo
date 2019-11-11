@@ -45,7 +45,7 @@ export default {
   methods: {
     ...mapActions(["timer", "generateCombination"])
   },
-  mounted() {
+  created() {
     this.timer();
     setTimeout(() => {
       this.generateCombination();
