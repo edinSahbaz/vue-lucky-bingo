@@ -2,29 +2,45 @@
   <div class="ticket">
     <p>
       Ticket ID:
-      <b>#3</b>
+      <b>#{{get_TicketId}}</b>
       <br />These are the numbers that have been generated for you:
     </p>
     <div class="balls">
-      <Ball num="12" />
-      <Ball num="73" />
-      <Ball num="25" />
-      <Ball num="71" />
-      <Ball num="24" />
-      <Ball num="55" />
-      <Ball num="18" />
-      <Ball num="94" />
+      <Ball :num="combination[0]" />
+      <Ball :num="combination[1]" />
+      <Ball :num="combination[2]" />
+      <Ball :num="combination[3]" />
+      <Ball :num="combination[4]" />
+      <Ball :num="combination[5]" />
+      <Ball :num="combination[6]" />
+      <Ball :num="combination[7]" />
     </div>
   </div>
 </template>
 
 <script>
 import Ball from "./../components/Main/Elements/Ball.vue";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "Ticket",
+  computed: {
+    ...mapGetters(["get_userCombinations", "get_TicketId"])
+  },
   components: {
     Ball
+  },
+  data() {
+    return {
+      combination: []
+    };
+  },
+  methods: {
+    ...mapActions(["generateUserCombination"])
+  },
+  created() {
+    this.generateUserCombination();
+    this.combination = this.get_userCombinations;
   }
 };
 </script>

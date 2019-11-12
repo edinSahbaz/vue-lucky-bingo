@@ -2,7 +2,7 @@
 //sad skratio na ovo i ovaj modul upravlja timerom
 
 const state = {
-  time: 59,
+  time: 9,
   display: "01:00"
 };
 

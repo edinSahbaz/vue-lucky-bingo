@@ -6,28 +6,22 @@
     <div class="balls">
       <MainBall :num="get_lastNum" />
       <div class="firstRow">
-        <BingoBall />
-        <BingoBall />
-        <BingoBall />
-        <BingoBall />
+        <BingoBall :num="combination[0]" />
+        <BingoBall :num="combination[1]" />
+        <BingoBall :num="combination[2]" />
+        <BingoBall :num="combination[3]" />
       </div>
       <div class="secondRow">
-        <BingoBall />
-        <BingoBall />
-        <BingoBall />
-        <BingoBall />
+        <BingoBall :num="combination[4]" />
+        <BingoBall :num="combination[5]" />
+        <BingoBall :num="combination[6]" />
+        <BingoBall :num="combination[7]" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-//Ti sad trebas napravit da u svaki ovaj BingoBall ubaci novi broj koji se prikaze u MainBall
-//i da ide redom...puni od 1. do 8. loptice
-
-//mozda moze se odrait sa v-for pa da ih kreira kako se izvlaci kombinacija,al eto...na tebi je kako
-//ces uradit.Znaci sad kad ovamo izvuce 5. broj npr treba prosljedit u 5. lopticu.
-
 import BingoBall from "./Elements/BingoBall";
 import MainBall from "./Elements/MainBall";
 
@@ -42,8 +36,21 @@ export default {
     BingoBall,
     MainBall
   },
+  data() {
+    return {
+      combination: [],
+      counter: 0
+    };
+  },
   methods: {
-    ...mapActions(["timer", "generateCombination"])
+    ...mapActions(["timer", "generateCombination"]),
+    fillBalls() {
+      setTimeout(() => {
+        this.combination.push(this.get_Combination[this.counter]);
+        ++this.counter;
+        this.fillBalls();
+      }, 6000);
+    }
   },
   created() {
     setTimeout(() => {
@@ -51,11 +58,8 @@ export default {
     }, 2000);
     setTimeout(() => {
       this.generateCombination();
-    }, 57000);
-
-    //poziva timer pri "montiranju" modula i posto treba 6s da se prikaze novi br,stavio sam da
-    //nakon sto krene timer krene i timeout za poziv funkcije koja ispisuje onaj lastNum iz modula
-    //jer bi bilo glupo da krene igra i cekas prvi broj 6s,ovako ga cekas samo 1s a ostalo ide isto :)
+      this.fillBalls();
+    }, 8000);
   }
 };
 </script>

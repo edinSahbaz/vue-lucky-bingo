@@ -7,18 +7,23 @@
 
 const state = {
   lastNum: "",
-  combination: []
+  combination: [],
+  userCombinations: [],
+  tempId: 1,
+  tickets: []
 };
 
 const getters = {
   get_lastNum: state => state.lastNum,
-  get_Combination: state => state.combination
+  get_Combination: state => state.combination,
+  get_userCombinations: state => state.userCombinations,
+  get_TicketId: state => state.tempId
 };
 
 const actions = {
   generateCombination() {
     for (let i = 0; i < 8; i++) {
-      let randNum = Math.ceil(Math.random() * 100);
+      let randNum = Math.floor(Math.random() * 100);
 
       if (!state.combination.includes(randNum)) {
         state.combination[i] = randNum;
@@ -38,7 +43,24 @@ const actions = {
         clearInterval();
       }
     }, 6000);
-  }
+  },
+
+  //OVO JE ZA USER KOMBINACIJE
+
+  generateUserCombination() {
+    for (let i = 0; i < 8; i++) {
+      let randNum = Math.floor(Math.random() * 100);
+
+      if (!state.userCombinations.includes(randNum)) {
+        state.userCombinations[i] = randNum;
+      } else {
+        i--;
+      }
+    }
+
+    this.saveTicket();
+  },
+  saveTicket() {}
 };
 
 const mutations = {};

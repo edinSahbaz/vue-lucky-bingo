@@ -6,7 +6,7 @@
       <span>On your ticket, you will see</span>
       <span>combination of 8 numbers and ID of your ticket.</span>
       <span>You can't make new tickets when the timer hits 00:00.</span>
-      <span>New timer arrives and every 10 seconds new number will be generated.</span>
+      <span>New timer arrives and every 6 seconds new number will be generated.</span>
       <span>Our bingo will create a combination of 8 different numbers.</span>
       <span>On screen you will see which ticket has the highest hits.</span>
       <span>Ticket with most hits is a winner.</span>
