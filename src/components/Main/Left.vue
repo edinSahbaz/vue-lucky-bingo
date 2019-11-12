@@ -8,7 +8,9 @@
 </template>
 
 <script>
-export default {
+  import { mapActions } from "vuex";
+
+  export default {
   name: "Left",
   data() {
     return {
@@ -16,8 +18,11 @@ export default {
     };
   },
   methods: {
+    ...mapActions(["incrementToMutation"]),
+
     increment() {
-      return ++this.count;
+      ++this.count;
+      this.incrementToMutation();
     }
   }
 };
