@@ -1,15 +1,18 @@
 const state = {
   time: 9,
-  display: "01:00"
+  display: "01:00",
+  buttonDisabler: false
 };
 
 const getters = {
-  get_display: state => state.display
+  get_display: state => state.display,
+  get_buttonState: state => state.buttonDisabler
 };
 
 const actions = {
   gameStartDisplay() {
     state.display = null;
+    state.buttonDisabler = true;
   },
   setTimeDisplay() {
     if (state.time >= 10) {
