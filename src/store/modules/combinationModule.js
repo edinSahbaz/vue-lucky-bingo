@@ -70,15 +70,22 @@ const actions = {
     });
   },
 
+  checkBalls() {
+    state.winnerCombination.winnerComb.forEach(e => {
+      if (state.combination.includes(e)) {
+        state.CorrectBalls.push(true);
+      } else {
+        state.CorrectBalls.push(false);
+      }
+    });
+  },
+
   findWinner() {
     state.userCombinations.forEach(e => {
       e.correctCombs = 0;
       e.comb.forEach(combItem => {
         if (state.combination.includes(combItem)) {
           e.correctCombs++;
-          state.CorrectBalls.push(true);
-        } else {
-          state.CorrectBalls.push(false);
         }
       });
     });
@@ -96,6 +103,8 @@ const actions = {
     state.winnerCombination.id = state.userCombinations[indexOfHighestComb].id;
     state.winnerCombination["winnerComb"] =
       state.userCombinations[indexOfHighestComb].comb;
+
+    this.checkBalls();
   }
 };
 
