@@ -4,11 +4,13 @@ const state = {
   userCombinations: [],
   tempId: 0,
   tickets: [],
+  correctCombinations: 0,
   winnerCombination: {
     id: "",
     winnerComb: []
   },
-  CorrectBalls: []
+  CorrectBalls: [],
+  currentComponent: "middleUpper"
 };
 
 const getters = {
@@ -17,7 +19,9 @@ const getters = {
   get_userCombinations: state => state.userCombinations,
   get_ticketId: state => state.tempId,
   get_winnerCombination: state => state.winnerCombination,
-  get_CorrectBalls: state => state.CorrectBalls
+  get_CorrectBalls: state => state.CorrectBalls,
+  get_correctCombinations: state => state.correctCombinations,
+  get_currentComponent: state => state.currentComponent
 };
 
 const actions = {
@@ -74,6 +78,7 @@ const actions = {
     state.winnerCombination.winnerComb.forEach(e => {
       if (state.combination.includes(e)) {
         state.CorrectBalls.push(true);
+        state.correctCombinations++;
       } else {
         state.CorrectBalls.push(false);
       }
@@ -105,6 +110,7 @@ const actions = {
       state.userCombinations[indexOfHighestComb].comb;
 
     this.checkBalls();
+    state.currentComponent = "Ending";
   }
 };
 

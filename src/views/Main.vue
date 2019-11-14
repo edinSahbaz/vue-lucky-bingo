@@ -1,8 +1,7 @@
 <template>
   <div class="main">
     <Left />
-    <!--<Ending/>-->
-    <middleUpper />
+    <div :is="this.get_currentComponent"></div>
     <middleBottom />
     <Right />
   </div>
@@ -13,7 +12,8 @@ import Left from "../components/Main/Left";
 import middleUpper from "../components/Main/middleUpper";
 import middleBottom from "../components/Main/middleBottom";
 import Right from "../components/Main/Right";
-//import Ending from "../components/Main/Ending";
+import Ending from "../components/Main/Ending";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Main",
@@ -21,8 +21,11 @@ export default {
     Left,
     middleUpper,
     middleBottom,
-    Right
-    //Ending
+    Right,
+    Ending
+  },
+  computed: {
+    ...mapGetters(["get_currentComponent"])
   }
 };
 </script>
