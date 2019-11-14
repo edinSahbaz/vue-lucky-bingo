@@ -1,5 +1,5 @@
 const state = {
-  time: 9,
+  time: 59,
   display: "01:00",
   buttonDisabler: false
 };

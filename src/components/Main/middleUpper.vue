@@ -1,101 +1,101 @@
 <template>
-    <div class="middleUpper">
-        <div class="starterTimer">
-            <span class="animated infinite fadeIn">{{get_display}}</span>
-        </div>
-        <div class="balls">
-            <MainBall :num="get_lastNum"/>
-            <div class="firstRow">
-                <BingoBall :num="combination[0]"/>
-                <BingoBall :num="combination[1]"/>
-                <BingoBall :num="combination[2]"/>
-                <BingoBall :num="combination[3]"/>
-            </div>
-            <div class="secondRow">
-                <BingoBall :num="combination[4]"/>
-                <BingoBall :num="combination[5]"/>
-                <BingoBall :num="combination[6]"/>
-                <BingoBall :num="combination[7]"/>
-            </div>
-        </div>
+  <div class="middleUpper">
+    <div class="starterTimer">
+      <span class="animated infinite fadeIn">{{get_display}}</span>
     </div>
+    <div class="balls">
+      <MainBall :num="get_lastNum" />
+      <div class="firstRow">
+        <BingoBall :num="combination[0]" />
+        <BingoBall :num="combination[1]" />
+        <BingoBall :num="combination[2]" />
+        <BingoBall :num="combination[3]" />
+      </div>
+      <div class="secondRow">
+        <BingoBall :num="combination[4]" />
+        <BingoBall :num="combination[5]" />
+        <BingoBall :num="combination[6]" />
+        <BingoBall :num="combination[7]" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-    import BingoBall from "./Elements/BingoBall";
-    import MainBall from "./Elements/MainBall";
+import BingoBall from "./Elements/BingoBall";
+import MainBall from "./Elements/MainBall";
 
-    import {mapGetters, mapActions} from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
-    export default {
-        name: "middleUpper",
-        computed: {
-            ...mapGetters(["get_display", "get_lastNum", "get_Combination"])
-        },
-        components: {
-            BingoBall,
-            MainBall
-        },
-        data() {
-            return {
-                combination: [],
-                counter: 0
-            };
-        },
-        methods: {
-            ...mapActions(["timer", "generateCombination", "findWinner"]),
-            fillBalls() {
-                setTimeout(() => {
-                    if (this.counter < 8) {
-                        this.combination.push(this.get_Combination[this.counter]);
-                        this.counter++;
-                        this.fillBalls();
-                    }
-                }, 6000);
-            }
-        },
-        created() {
-            setTimeout(() => {
-                this.timer();
-            }, 2000);
-            setTimeout(() => {
-                this.generateCombination();
-                this.fillBalls();
-            }, 8000);
-        }
+export default {
+  name: "middleUpper",
+  computed: {
+    ...mapGetters(["get_display", "get_lastNum", "get_Combination"])
+  },
+  components: {
+    BingoBall,
+    MainBall
+  },
+  data() {
+    return {
+      combination: [],
+      counter: 0
     };
+  },
+  methods: {
+    ...mapActions(["timer", "generateCombination", "findWinner"]),
+    fillBalls() {
+      setTimeout(() => {
+        if (this.counter < 8) {
+          this.combination.push(this.get_Combination[this.counter]);
+          this.counter++;
+          this.fillBalls();
+        }
+      }, 6000);
+    }
+  },
+  created() {
+    setTimeout(() => {
+      this.timer();
+    }, 2000);
+    setTimeout(() => {
+      this.generateCombination();
+      this.fillBalls();
+    }, 58000);
+  }
+};
 </script>
 
 <style scoped>
-    @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css";
 
-    .middleUpper {
-        display: grid;
-        grid-area: middleUpper;
-        grid-template-rows: 0.3fr 1.7fr;
-    }
+.middleUpper {
+  display: grid;
+  grid-area: middleUpper;
+  grid-template-rows: 0.3fr 1.7fr;
+}
 
-    .starterTimer {
-        font-size: 3em;
-        padding-left: 0.5em;
-        padding-top: 0.2em;
-    }
+.starterTimer {
+  font-size: 3em;
+  padding-left: 0.5em;
+  padding-top: 0.2em;
+}
 
-    .balls {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.balls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .firstRow {
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-        margin: 1em;
-    }
+.firstRow {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+}
 
-    .secondRow {
-        display: flex;
-        flex-direction: column;
-    }
+.secondRow {
+  display: flex;
+  flex-direction: column;
+}
 </style>
