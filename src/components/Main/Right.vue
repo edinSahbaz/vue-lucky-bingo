@@ -14,6 +14,7 @@
             <span>Good luck!</span>
         </div>
         <div class="authors">
+            <font-awesome-icon :icon="['fab', 'github']" />
             <button id="authInfo" @click="showAuthors">Credits</button>
         </div>
     </div>
@@ -25,6 +26,15 @@
     // al doduse nije mi tolko ni glupo kolko neam sad volje
     // et.. sutra ću hard hustle, dns je kita dan haha
 
+    // .. nisam mogo odolit
+    // HAHAHAHA
+    // importovo sam github ikonicu, al je veoma jeben problem je u popup prikazat
+    // msm da ces vjerovatno zaobic popup tj. da bude github u popup-u
+    // et, princip od font-awesome usranog package-a skontan yeah (main.js i right.vue)
+    // poyz, sretno hehe
+    // već smo počeli komplikovat
+    // ostavljaj vak komentarcice da moremo što dalje otic hehe
+
     import Swal from 'sweetalert2';
 
     export default {
@@ -33,10 +43,10 @@
             showAuthors() {
                 Swal.fire({
                         title: 'Authors',
-                        text: '<span>Kenan Sejmenović</span>' +
-                            '<br>' +
-                            '<span>Edin Šahbaz</span>',
+                        html: "<span>Kenan Sejmenović</span><br><span>Edin Šahbaz</span>",
                         icon: 'info',
+                    confirmButtonColor: '#41B883',
+                    confirmButtonText: 'Great work!',
                     }
                 )
             }
@@ -65,7 +75,6 @@
     }
 
     .authors {
-        border: 1px solid red;
         height: 40vh;
         display: flex;
         justify-content: center;
