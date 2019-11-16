@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <vue-particles color="#dedede" :particlesNumber="100"></vue-particles>
+    <vue-particles color="#dedede" :particlesNumber="80"></vue-particles>
   </div>
 </template>
 

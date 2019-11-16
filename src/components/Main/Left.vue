@@ -1,9 +1,13 @@
 <template>
   <div class="left">
+    <img src="./../../assets/logo.png" alt="" />
+
     <router-link v-bind:to="newId" target="_blank">
-      <button :disabled="this.get_buttonState" v-on:click="increment">GET Ticket</button>
+      <button :disabled="this.get_buttonState" v-on:click="increment">
+        GET Ticket
+      </button>
     </router-link>
-    <p>Tickets withdrew: {{count}}</p>
+    <p>Tickets withdrew: {{ count }}</p>
   </div>
 </template>
 
@@ -85,14 +89,22 @@ button {
   border-radius: 0.8em;
   width: 8em;
   height: 2em;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 button:hover {
-  cursor: pointer;
+  background-color: #383f4d;
 }
 
 p {
   margin-top: 1.2em;
   font-size: 1.2em;
+}
+
+img {
+  width: 20vh;
+  height: 20vh;
+  margin-bottom: 20px;
 }
 </style>
