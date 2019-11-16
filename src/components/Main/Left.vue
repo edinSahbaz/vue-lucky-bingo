@@ -91,10 +91,83 @@ button {
   height: 2em;
   transition: 0.4s;
   cursor: pointer;
+  position: relative;
+  z-index: 0;
+  animation: move infinite 1s;
 }
 
 button:hover {
-  background-color: #383f4d;
+  animation: hoverMove 700ms infinite;
+}
+
+button:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+button:active {
+  color: #ef424c;
+}
+
+button:active:after {
+  background: transparent;
+}
+
+button:hover:before {
+  opacity: 1;
+}
+
+button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ef424c;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  transition: 0.7s;
+}
+
+button:hover:after {
+  background: #383f4d;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes move {
+  0% {transform: rotate(0deg)}
+  20% {transform: rotate(0.2deg)}
+  50% {transform: rotate(-0.2deg)}
+  70% {transform: rotate(0.2deg)}
+  90% {transform: rotate(-0.2deg)}
+  100% {transform: rotate(0deg)}
+}
+
+@keyframes hoverMove {
+  0% {transform: rotateZ(0deg)}
+  20% {transform: rotateZ(-0.5deg)}
+  40% {transform: rotateZ(0.5deg)}
+  60% {transform: rotateZ(-0.5deg)}
+  80% {transform: rotateZ(0.5deg)}
+  100% {transform: rotateZ(0deg)}
 }
 
 p {
