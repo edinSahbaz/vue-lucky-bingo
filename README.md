@@ -27,4 +27,4 @@ If you are lucky enough and you guess all of eight numbers, you scored Bingo.
 
 #### Good luck!
 
-#### Try it out: https://gambling-game.netlify.com/
+#### Try it out: https://lucky-bingo.netlify.com/
