@@ -27,7 +27,7 @@ const getters = {
 const actions = {
   generateCombination() {
     for (let i = 0; i < 8; i++) {
-      let randNum = Math.floor(Math.random() * 100);
+      let randNum = Math.floor(Math.random() * 50) + 1;
 
       if (!state.combination.includes(randNum)) {
         state.combination[i] = randNum;
@@ -62,7 +62,7 @@ const actions = {
     state.userCombinations.forEach(e => {
       if (e.id === state.tempId) {
         for (let i = 0; i < 8; i++) {
-          let randNum = Math.floor(Math.random() * 100);
+          let randNum = Math.floor(Math.random() * 50) + 1;
 
           if (!e.comb.includes(randNum)) {
             e.comb[i] = randNum;
