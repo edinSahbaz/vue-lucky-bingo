@@ -14,6 +14,17 @@ After downloading the repo, navigate to it's directory with CLI.
 
 ## <img src="https://cdn1.iconfinder.com/data/icons/material-core/22/visibility-32.png" width="32"/> Description:
 
-Will be added...
+Grab your tickets before the timer hits 00:00.
+On your ticket, you will see combination of 8 numbers and ID of your ticket.
+You can't make new tickets when the timer hits 00:00.
+New timer arrives and every 6 seconds new number will be generated.
+
+Our bingo will create a combination of 8 different numbers.
+On screen you will see which ticket has the highest hits.
+Ticket with most hits is a winner.
+
+If you are lucky enough and you guess all of eight numbers, you scored Bingo.
+
+#####Good luck!
 
 #### Try it out: https://gambling-game.netlify.com/
