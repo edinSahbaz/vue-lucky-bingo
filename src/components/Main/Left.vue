@@ -4,7 +4,7 @@
 
     <router-link v-bind:to="newId" target="_blank">
       <button :disabled="this.get_buttonState" v-on:click="increment">
-        GET Ticket
+        {{(this.get_buttonState) ? 'Good Luck' : 'GET Ticket'}}
       </button>
     </router-link>
     <p>Tickets withdrew: {{ count }}</p>
