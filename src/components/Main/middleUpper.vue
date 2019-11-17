@@ -123,5 +123,6 @@ export default {
 .mainBallAndTimer span {
   font-size: 1.8em;
   margin-top: 10px;
+  height: 1.8em;
 }
 </style>
