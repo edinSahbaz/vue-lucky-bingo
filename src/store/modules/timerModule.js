@@ -2,13 +2,15 @@ const state = {
   time: 59,
   display: "01:00",
   buttonDisabler: false,
-  ballTimer: null
+  ballTimer: null,
+  endTimer: "00:05"
 };
 
 const getters = {
   get_display: state => state.display,
   get_buttonState: state => state.buttonDisabler,
-  get_ballTimer: state => state.ballTimer
+  get_ballTimer: state => state.ballTimer,
+  get_endTimer: state => state.endTimer
 };
 
 const actions = {
@@ -52,6 +54,13 @@ const actions = {
         state.ballTimer = null;
         clearInterval();
       }
+    }, 1000);
+  },
+  endingCountdown() {
+    let i = 4;
+    setInterval(() => {
+      state.endTimer = "00:0" + i;
+      i--;
     }, 1000);
   }
 };

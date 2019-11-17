@@ -46,7 +46,10 @@ const actions = {
         i++;
       } else {
         clearInterval(ntrvl);
-        this.findWinner();
+        setTimeout(() => {
+          this.findWinner();
+        }, 5000);
+        state.currentComponent = "Ending";
       }
     }, 6000);
   },
@@ -110,7 +113,6 @@ const actions = {
       state.userCombinations[indexOfHighestComb].comb;
 
     this.checkBalls();
-    state.currentComponent = "Ending";
   }
 };
 

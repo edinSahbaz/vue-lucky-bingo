@@ -58,11 +58,13 @@ export default {
       "ballTimerCountdown"
     ]),
     fillBalls() {
-      setTimeout(() => {
-        if (this.counter < 8) {
+      let ntrvl = setInterval(() => {
+        if (this.counter < 7) {
           this.combination.push(this.get_Combination[this.counter]);
           this.counter++;
-          this.fillBalls();
+        } else {
+          this.combination.push(this.get_Combination[this.counter]);
+          clearInterval(ntrvl);
         }
       }, 6000);
     }
