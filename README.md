@@ -1,8 +1,8 @@
-# GAMBLING GAME
+# Lucky BINGO
 
-## Welcome to the Gambling Game repository!
+## Welcome to the Lucky BINGO repository!
 
-This gambling game is a Single Page Application(SPA) created in **Vue**.
+This game is a Single Page Application(SPA) created in **Vue**.
 
 ## <img src="https://cdn1.iconfinder.com/data/icons/material-core/20/settings-32.png" width="32"/> How to build and run:
 
@@ -25,6 +25,6 @@ Ticket with most hits is a winner.
 
 If you are lucky enough and you guess all of eight numbers, you scored Bingo.
 
-##### Good luck!
+#### Good luck!
 
 #### Try it out: https://gambling-game.netlify.com/
