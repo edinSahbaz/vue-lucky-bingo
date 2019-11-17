@@ -97,11 +97,22 @@ export default {
 }
 
 #authInfo:before {
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
   position: absolute;
   top: -2px;
-  left:-2px;
+  left: -2px;
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
@@ -109,7 +120,7 @@ export default {
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
 
@@ -127,7 +138,7 @@ export default {
 
 #authInfo:after {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -143,36 +154,78 @@ export default {
 }
 
 @keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 @keyframes tsunami {
-  0% {transform: rotate(0deg)}
-  20% {transform: rotate(0.4deg) scale(1.003)}
-  40% {transform: rotate(-0.4deg) scale(1)}
-  60% {transform: rotate(0.4deg) scale(1.003)}
-  80% {transform: rotate(-0.4deg) scale(1)}
-  100% {transform: rotate(0deg)}
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0.4deg) scale(1.003);
+  }
+  40% {
+    transform: rotate(-0.4deg) scale(1);
+  }
+  60% {
+    transform: rotate(0.4deg) scale(1.003);
+  }
+  80% {
+    transform: rotate(-0.4deg) scale(1);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes hoverTsunami {
-  0% {transform: rotateZ(0deg)}
-  20% {transform: rotateZ(-2deg)}
-  40% {transform: rotateZ(6deg)}
-  60% {transform: rotateZ(-2deg)}
-  80% {transform: rotateZ(6deg) scale(1.01)}
-  100% {transform: rotateZ(0deg)}
+  0% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(-2deg);
+  }
+  40% {
+    transform: rotateZ(6deg);
+  }
+  60% {
+    transform: rotateZ(-2deg);
+  }
+  80% {
+    transform: rotateZ(6deg) scale(1.01);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
 }
 
 @keyframes hoverInfiniteTsunami {
-  0% {transform: rotateZ(0deg)}
-  20% {transform: rotateZ(-0.5deg)}
-  40% {transform: rotateZ(0.5deg)}
-  60% {transform: rotateZ(-0.5deg)}
-  80% {transform: rotateZ(0.5deg))}
-  100% {transform: rotateZ(0deg)}
+  0% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(-0.5deg);
+  }
+  40% {
+    transform: rotateZ(0.5deg);
+  }
+  60% {
+    transform: rotateZ(-0.5deg);
+  }
+  80% {
+    transform: rotateZ(0.5deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
 }
 
 #githubIcon {

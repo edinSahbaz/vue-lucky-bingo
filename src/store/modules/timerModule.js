@@ -1,12 +1,14 @@
 const state = {
   time: 59,
   display: "01:00",
-  buttonDisabler: false
+  buttonDisabler: false,
+  ballTimer: null
 };
 
 const getters = {
   get_display: state => state.display,
-  get_buttonState: state => state.buttonDisabler
+  get_buttonState: state => state.buttonDisabler,
+  get_ballTimer: state => state.ballTimer
 };
 
 const actions = {
@@ -29,6 +31,26 @@ const actions = {
       } else {
         clearInterval();
         actions.gameStartDisplay();
+      }
+    }, 1000);
+  },
+
+  ballTimerCountdown() {
+    let i = 5;
+    let ball = 1;
+    setInterval(() => {
+      if (i > 0) {
+        i--;
+      } else {
+        i = 5;
+        ball += 1;
+      }
+
+      if (ball <= 8) {
+        if (ball != 1) state.ballTimer = "00:" + "0" + i;
+      } else {
+        state.ballTimer = null;
+        clearInterval();
       }
     }, 1000);
   }

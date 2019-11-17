@@ -1,10 +1,13 @@
 <template>
   <div class="middleUpper">
     <div class="starterTimer">
-      <span class="animated infinite fadeIn">{{get_display}}</span>
+      <span class="animated infinite fadeIn">{{ get_display }}</span>
     </div>
     <div class="balls">
-      <MainBall :num="get_lastNum" />
+      <div class="mainBallAndTimer">
+        <MainBall :num="get_lastNum" />
+        <span class="animated infinite fadeIn">{{ get_ballTimer }}</span>
+      </div>
       <div class="firstRow">
         <BingoBall :num="combination[0]" />
         <BingoBall :num="combination[1]" />
@@ -30,7 +33,12 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   name: "middleUpper",
   computed: {
-    ...mapGetters(["get_display", "get_lastNum", "get_Combination"])
+    ...mapGetters([
+      "get_display",
+      "get_lastNum",
+      "get_Combination",
+      "get_ballTimer"
+    ])
   },
   components: {
     BingoBall,
@@ -43,7 +51,12 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["timer", "generateCombination", "findWinner"]),
+    ...mapActions([
+      "timer",
+      "generateCombination",
+      "findWinner",
+      "ballTimerCountdown"
+    ]),
     fillBalls() {
       setTimeout(() => {
         if (this.counter < 8) {
@@ -61,6 +74,7 @@ export default {
     setTimeout(() => {
       this.generateCombination();
       this.fillBalls();
+      this.ballTimerCountdown();
     }, 58000);
   }
 };
@@ -97,5 +111,17 @@ export default {
 .secondRow {
   display: flex;
   flex-direction: column;
+}
+
+.mainBallAndTimer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainBallAndTimer span {
+  font-size: 1.8em;
+  margin-top: 10px;
 }
 </style>
