@@ -241,7 +241,7 @@ a {
 }
 
 a:hover {
-  color: #18191b;
+  color: hsla(0,0%,100%,.7);
 }
 
 .Swal-title {
