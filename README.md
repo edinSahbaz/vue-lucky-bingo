@@ -25,6 +25,6 @@ Ticket with most hits is a winner.
 
 If you are lucky enough and you guess all of eight numbers, you scored Bingo.
 
-#####Good luck!
+##### Good luck!
 
 #### Try it out: https://gambling-game.netlify.com/
